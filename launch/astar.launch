@@ -1,0 +1,11 @@
+<launch>
+    <!-- 加载参数文件 -->
+    <rosparam command="load" file="$(find uav_planner)/config/astar.yaml" />
+
+    <!-- 启动规划节点 -->
+    <node pkg="uav_planner" type="uav_planner_node" name="astar_node" output="screen">
+    </node>
+    
+    <!-- (可选) 启动 Rviz 可视化 -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find uav_planner)/rviz/planner.rviz" />
+</launch>

@@ -1,0 +1,30 @@
+target_x: 6.0
+target_y: 0.0
+if_debug: 1.0
+
+planner:
+  control_freq: 20.0
+  replan_cooldown: 2.0
+  max_speed: 0.7
+
+  # 地图配置 (以起飞点为中心，20x20m)
+  map_size_x: 20.0
+  map_size_y: 20.0
+  map_resolution: 0.1
+  map_origin_x: -10.0
+  map_origin_y: -10.0
+  safety_margin: 0.35  # 膨胀半径 (无人机半径 + 安全余量)
+
+  astar:
+    heuristic_weight: 1.5   # 1.0=准确(Dijkstra-like), 1.5=快速(Greedy)
+    max_iter: 5000
+
+  vfh:
+    max_lookahead: 3.5      # 局部感知范围
+    hist_res: 5.0           # 扇区角度分辨率(度)
+    
+    # === 权重调参重点 ===
+    w_target: 3.0           # 目标吸引力
+    w_smooth: 4.0           # 历史平滑 (调大防止震荡)
+    w_obs: 8.0              # 避障力度
+    w_corridor: 2.5         # 走廊约束力 (防止跑偏)
