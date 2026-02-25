@@ -16,7 +16,7 @@ float if_debug = 0.0f;
 float init_position_x_take_off = 0.0f;
 float init_position_y_take_off = 0.0f;
 float init_position_z_take_off = 0.0f;
-ros::NodeHandle nh; // detect_obs 中使用的全局 nh
+//ros::NodeHandle nh; // detect_obs 中使用的全局 nh
 
 // =========================================================
 // MapManager Implementation

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(astar)
+project(astar_node)
 
 # 1. 设置 C++ 标准为 17 (工程规范)
 set(CMAKE_CXX_STANDARD 17)

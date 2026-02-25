@@ -21,7 +21,7 @@
 
 extern float target_x;
 extern float target_y;
-extern ros::NodeHandle nh;
+//extern ros::NodeHandle nh;
 extern nav_msgs::Odometry local_pos;
 extern float if_debug;
 extern float init_position_x_take_off;
